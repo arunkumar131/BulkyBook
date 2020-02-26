@@ -39,7 +39,7 @@ namespace BulkyBook.DataAccess.Repository
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
                 sqlCon.Open();
-                sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
+                return sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
             }
         }
 
