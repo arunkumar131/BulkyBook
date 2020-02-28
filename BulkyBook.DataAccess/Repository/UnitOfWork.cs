@@ -11,8 +11,12 @@ namespace BulkyBook.DataAccess.Repository
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
+            
+            //Add the new repository here 
             Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
+            CoverType = new CoverTypeRepository(_db);
+
         }
 
         public ICategoryRepository Category { get; private set; }
