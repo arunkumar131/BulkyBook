@@ -127,7 +127,7 @@
                     Image
                 </div>
                 <div class="col-8">
-                   <input type="file" name="files" id="UploadBox" multiple class="form-control"/>
+                    <input type="file" name="files" id="uploadBox" multiple class="form-control" />
                 </div>
             </div>
 
@@ -139,16 +139,16 @@
                     }
                     else
                     {
-                <div class="row">
-                    <div class="col">
-                        <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Add</button>
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Add</button>
+                            </div>
 
-                    <div class="col">
-                        <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
-                    </div>
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                            </div>
 
-                </div>
+                        </div>
                     }
                 </div>
             </div>
@@ -159,5 +159,22 @@
 
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.tiny.cloud/1/pn1ddlr122r8x44p0x52q7zc4v5s83njmgpvogcbvgds3691/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
+
+        function validateInput() {
+            if (document.getElementById("uploadBox").value = "") {
+                swal("Error", "Please select an image", "error");
+                return false;
+            }
+            return true;
+        }
+    </script>
 }
 
