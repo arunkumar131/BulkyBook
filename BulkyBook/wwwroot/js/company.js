@@ -19,10 +19,10 @@ function loadDataTable() {
                 "data": "isAuthorizedCompany",
                 "render": function (data) {
                     if (data) {
-                        return `<input type="checkbox" disabled checked/>`
+                        return `<input type="checkbox" disabled checked />`
                     }
                     else {
-                        return `<input type="checkbox" disabled/>`
+                        return `<input type="checkbox" disabled />`
                     }
                 }
             }
