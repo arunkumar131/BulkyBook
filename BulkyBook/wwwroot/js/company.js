@@ -25,8 +25,7 @@ function loadDataTable() {
                         return `<input type="checkbox" disabled />`
                     }
                 }
-            }
-
+            },
 
             {
                 "data": "id",

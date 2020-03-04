@@ -7,7 +7,7 @@ namespace BulkyBook.Areas.Admin.Controllers
     [Area("Admin")]
     public class CompanyController : Controller
     {
-       private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
         public CompanyController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -55,6 +55,7 @@ namespace BulkyBook.Areas.Admin.Controllers
         }
 
         #region [API Calls]
+
         [HttpGet]
         public IActionResult GetAll()
         {
