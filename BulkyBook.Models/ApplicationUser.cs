@@ -11,6 +11,12 @@ namespace BulkyBook.Models
         public string State { get; set; }
         public string PostalCode { get; set; }
 
+        public int? CompanyId { get; set; }
+
+        [ForeignKey("CompanyId")]
+        public Company Company { get; set; }
+
+
         //This porperty will not be pushed to the database
         [NotMapped]
         public string Role { get; set; }
